@@ -1,4 +1,8 @@
-var pingpong = function(number) {
+function Calculator(skinName) {
+  this.skin = skinName;
+}
+
+Calculator.prototype.pingPong = function(number) {
   var numbers = [];
   for (i=1; i<=number; i++) {
     if (i % 3 === 0 && i % 5 != 0){
@@ -14,11 +18,4 @@ var pingpong = function(number) {
   return numbers;
 };
 
-
-$(document).ready(function(){
-  $("form").submit(function(event){
-    event.preventDefault();
-    var number = $("#number").val();
-    $("#output").html(pingpong(number));
-  });
-});
+exports.calculatorModule = Calculator;
