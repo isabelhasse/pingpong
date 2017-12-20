@@ -8,13 +8,13 @@ Calculator.prototype.pingPong = function(number) {
     if (i % 3 === 0 && i % 5 != 0){
       numbers.push(" ping,");
     } else if (i % 5 === 0 && i % 3 != 0) {
-      numbers.push(" pong,")
+      numbers.push(" pong,");
     } else if (i % 15 === 0) {
-      numbers.push(" <span class='pingpong'>pingpong,</span>")
+      numbers.push(" <span class='pingpong'>pingpong,</span>");
     } else {
       numbers.push(" " + i + ",");
     }
-  };
+  }
   return numbers;
 };
 
